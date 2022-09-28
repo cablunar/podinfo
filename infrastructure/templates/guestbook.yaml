@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: {{ .Values.spec.destination.server }}
-  project: infrastructure
+  project: default
   source:
     path: guestbook
     repoURL: {{ .Values.spec.source.repoURL }}
