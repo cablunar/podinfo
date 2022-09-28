@@ -6,6 +6,9 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
   destination:
     namespace: infra
     server: {{ .Values.spec.destination.server }}
